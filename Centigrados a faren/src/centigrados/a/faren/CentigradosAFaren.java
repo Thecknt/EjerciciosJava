@@ -19,10 +19,12 @@ public class CentigradosAFaren {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner leer = new Scanner(System.in);
-       
-        int faren = 32 + (9 * 40 / 5);
+       System.out.println("Ingrese los grados deseados a convertir");
+        int temp = leer.nextInt();
         
-        System.out.println("La temperatura observada al momento y convertida a Faren es de: "+ faren + "°");
+        int faren = 32 + (temp * 9/5);
+        
+       System.out.println(temp + "° en escala Fahrenheit es " + faren +"°");
     }
     
 }
