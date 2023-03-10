@@ -28,11 +28,11 @@ public class validarPrimerLetra {
         
         String letra2 = "";
         
-        letra1 = leer.next();
+        letra2 = leer.next();
         
-        letra2 = letra2.substring(0);
+        letra2 = letra2.substring(0,1);
         
-        if (letra1 == letra2) {
+        if (letra1.equals(letra2)) {
             System.out.println("CORRECTO");
         } else {
             System.out.println("INCORRECTO");
