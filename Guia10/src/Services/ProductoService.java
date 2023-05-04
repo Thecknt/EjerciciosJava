@@ -40,11 +40,9 @@ public class ProductoService {
             Producto p = productos.get(nombre);
             System.out.println("Ingrese el nuevo valor del producto: ");
             p.setPrecio(input.nextDouble());
-            System.out.println("Producto actualizado exitosamente!");
-            System.out.println("-----------------------------------------------");
+            System.out.println("Producto actualizado exitosamente!");           
         } else {
             System.out.println("El producto no se encuentra en la lista");
-            System.out.println("-----------------------------------------------");
         }
     }
 
@@ -56,10 +54,8 @@ public class ProductoService {
             Producto p = productos.get(nombre);
             productos.remove(p.getNombre());
             System.out.println("El producto " + nombre + " ha sido exitosamente eliminado");
-            System.out.println("-------------------------------------------");
         } else {
             System.out.println("El producto no se encuentra en la lista");
-            System.out.println("-----------------------------------------------");
         }
     }
 
@@ -67,7 +63,6 @@ public class ProductoService {
         for (String aux : productos.keySet()) {
             Producto p = productos.get(aux);
             System.out.println(" El producto " + p.getNombre() + ", tiene un Precio de: " + p.getPrecio());
-            System.out.println("----------------------------------------------------------------");
         }
     }
 }
