@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -5,3 +6,15 @@
         <group/>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/santi/OneDrive/Documentos/NetBeansProjects/Guia7/src/ejercicioExtra7.java</file>
+            <file>file:/C:/Users/santi/OneDrive/Documentos/NetBeansProjects/Guia7/src/ClasesExtra/Rectangulo1.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> c70357b6a524489a3be1af6de8717370a7b2b176

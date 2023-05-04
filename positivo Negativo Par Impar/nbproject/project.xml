@@ -3,7 +3,11 @@
     <type>org.netbeans.modules.java.j2seproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/j2se-project/3">
+<<<<<<< HEAD
             <name>positivoNegativoParImpar</name>
+=======
+            <name>positivo Negativo Par Impar</name>
+>>>>>>> c70357b6a524489a3be1af6de8717370a7b2b176
             <source-roots>
                 <root id="src.dir"/>
             </source-roots>

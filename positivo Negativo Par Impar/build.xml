@@ -7,8 +7,13 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
+<<<<<<< HEAD
 <project name="positivoNegativoParImpar" default="default" basedir=".">
     <description>Builds, tests, and runs the project positivoNegativoParImpar.</description>
+=======
+<project name="positivo_Negativo_Par_Impar" default="default" basedir=".">
+    <description>Builds, tests, and runs the project positivo Negativo Par Impar.</description>
+>>>>>>> c70357b6a524489a3be1af6de8717370a7b2b176
     <import file="nbproject/build-impl.xml"/>
     <!--
 
@@ -58,7 +63,11 @@
 
     An example of overriding the target for project execution could look like this:
 
+<<<<<<< HEAD
         <target name="run" depends="positivoNegativoParImpar-impl.jar">
+=======
+        <target name="run" depends="positivo_Negativo_Par_Impar-impl.jar">
+>>>>>>> c70357b6a524489a3be1af6de8717370a7b2b176
             <exec dir="bin" executable="launcher.exe">
                 <arg file="${dist.jar}"/>
             </exec>
