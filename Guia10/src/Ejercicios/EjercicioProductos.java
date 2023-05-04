@@ -28,6 +28,7 @@ public class EjercicioProductos {
      do {   
          System.out.println("----------------------------------------------");
         System.out.println("Bienvenido/a a la tienda online");
+        System.out.println("");
         System.out.println("Seleccione la opcion deseada");
         System.out.println("1) Cargar Producto");
         System.out.println("2) Modificar precio de un producto");
