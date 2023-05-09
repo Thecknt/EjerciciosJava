@@ -31,7 +31,7 @@ realizar la operación y false en caso contrario.
 package Entidades;
 
 public class Libreria {
-    
+
     private String titulo;
     private String autor;
     private int numeroLibros;
@@ -40,8 +40,6 @@ public class Libreria {
     public Libreria() {
     }
 
-    
-    
     public Libreria(String titulo, String autor, int numeroLibros, int librosPrestados) {
         this.titulo = titulo;
         this.autor = autor;
@@ -83,9 +81,7 @@ public class Libreria {
 
     @Override
     public String toString() {
-        return "Los libros en Libreria son: {" + "Titulo: \n" + titulo + ", Autor: \n" + autor + ", Numero de Ejemplares: \n" + numeroLibros + ", Cantidad de Libros Prestados: \n" + librosPrestados + '}';
+        return "Los libros en Libreria son: {" + "\n Titulo: " + titulo + "\n Autor: " + autor + "\n Numero de Ejemplares: " + numeroLibros + "\n Cantidad de Libros Prestados: " + librosPrestados + '}';
     }
-    
-    
-    
+
 }
