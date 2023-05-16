@@ -9,7 +9,6 @@ la clase Persona, la información del Perro y de la Persona.
 package Entidades;
 
 public class Persona {
-    //nombre, apellido, edad, documento y Perro
 
     private String nombre;
     private String apellido;
