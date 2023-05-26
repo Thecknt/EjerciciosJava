@@ -1,26 +1,26 @@
 package Entidades;
 
 public class Electrodomestico {
-    protected int precio;
+    protected Double precio;
     protected String color;
     protected char consumoEnergetico;
-    protected int peso;
+    protected Integer peso;
 
     public Electrodomestico() {
     }
 
-    public Electrodomestico(int precio, String color, char consumoEnergetico, int peso) {
+    public Electrodomestico(Double precio, String color, char consumoEnergetico, Integer peso) {
         this.precio = precio;
         this.color = color;
         this.consumoEnergetico = consumoEnergetico;
         this.peso = peso;
     }
 
-    public int getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(Double precio) {
         this.precio = precio;
     }
 
@@ -40,17 +40,19 @@ public class Electrodomestico {
         this.consumoEnergetico = consumoEnergetico;
     }
 
-    public int getPeso() {
+    public Integer getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(Integer peso) {
         this.peso = peso;
     }
 
-  
-    abstract public char ConsumoEnergetico(char letra);
-    
+    @Override
+    public String toString() {
+        return "Electrodomestico{" + "precio=" + precio + ", color=" + color + ", consumoEnergetico=" + consumoEnergetico + ", peso=" + peso + '}';
+    }
+
 }
 
 
@@ -123,3 +125,15 @@ public class Electrodomestico {
 //Finalmente, en el main debemos realizar lo siguiente:
 //Vamos a crear una Lavadora y un Televisor y llamar a los métodos necesarios para mostrar 
 //el precio final de los dos electrodomésticos. 
+
+/*
+Parte 2 del mismo ejercicio:
+ Siguiendo el ejercicio anterior, en el main vamos a crear un ArrayList de Electrodomésticos 
+para guardar 4 electrodomésticos, ya sean lavadoras o televisores, con valores ya asignados.
+Luego, recorrer este array y ejecutar el método precioFinal() en cada electrodoméstico. Se 
+deberá también mostrar el precio de cada tipo de objeto, es decir, el precio de todos los 
+televisores y el de las lavadoras. Una vez hecho eso, también deberemos mostrar, la suma del 
+precio de todos los Electrodomésticos. Por ejemplo, si tenemos una lavadora con un precio de 
+2000 y un televisor de 5000, el resultado final será de 7000 (2000+5000) para 
+electrodomésticos, 2000 para lavadora y 5000 para televisor
+*/
