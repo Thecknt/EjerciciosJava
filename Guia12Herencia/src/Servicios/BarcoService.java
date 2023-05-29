@@ -16,7 +16,6 @@ public class BarcoService extends ClienteService{
     Barco barco;
     
     public Barco crearBarco(Cliente cliente){
-        //ingresarDatosClientes();
         barco= new Barco();
         System.out.println("Ingrese la matricula del Barco...............>");
         Integer matricula = input.nextInt();

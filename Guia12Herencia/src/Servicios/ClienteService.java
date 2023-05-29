@@ -56,8 +56,6 @@ public class ClienteService {
         System.out.println("En este momento tenemos distintas posiciones disponibles de amarre");
         System.out.println("Ingrese un numero del 1 al 10...............>");
         cliente.setPosicionAmarre(input.nextInt());
-        //cliente = new Cliente(nombre,DNI,fechaAlquiler,fechaDevolucion,posicionAmarre);
-        //System.out.println("Los datos son" + cliente);
         return cliente; 
     }
     
