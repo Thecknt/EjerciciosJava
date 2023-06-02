@@ -53,7 +53,7 @@ Double nuevoPrecio;
         super.precioFinal();
         
         
-        if (tele.getResolucion()>=40 && tele.isSintonizadorTDT()) {
+        if (tele.getResolucion()>=40 && tele.isSintonizadorTDT()==true) {
             nuevoPrecio = (elec.getPrecio() * 30/100)+ elec.getPrecio() + 500.00;
             tele.setPrecio(nuevoPrecio);
                 System.out.println("El precio final de la tele es: "+nuevoPrecio);
