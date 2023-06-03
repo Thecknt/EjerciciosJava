@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class ResidenciasService {
 
-    Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in).useDelimiter("\n");
 
     List<Residencias> residencias = new ArrayList();
     Residencias residencia1, residencia2;
@@ -35,7 +35,7 @@ public class ResidenciasService {
     }
 
     public Residencias crearResidenciaDinamica() {
-
+         
         System.out.println("Ingrese la cantidad de Habitaciones que hay en la Residencia");
         int cantidadHabitaciones = input.nextInt();
         System.out.println("¿Posee descuentos para Gremios?");

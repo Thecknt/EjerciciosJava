@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class CampingService {
 
-    Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in).useDelimiter("\n");
 
     Camping camping;
     Camping camping2;
@@ -28,8 +28,6 @@ public class CampingService {
         String direccion = "Calle Falsa 624";
         String localidad = "Vicente Lopez, Buenos Aires";
         String gerente = "Carlos Valdez";
-        //public Camping(int capacidadMaximaCarpas, int cantidadBanios, String restaurantCamping, String privado, int cantidadMetros2, String nombre, String direccion, String localidad, String gerente) {
-        //   super(privado, cantidadMetros2, nombre, direccion, localidad, gerente);
         camping = new Camping(capacidadMaximaCarpas,cantidadBanios,restaurantCamping,campingPrivado,cantidadMetros2,nombre,direccion,localidad,gerente);
         campings.add(camping);
         System.out.println(camping);

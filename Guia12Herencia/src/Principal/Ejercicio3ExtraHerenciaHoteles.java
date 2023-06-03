@@ -65,8 +65,8 @@ import java.util.Scanner;
 public class Ejercicio3ExtraHerenciaHoteles {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        List<Camping> campings;
+        Scanner input = new Scanner(System.in).useDelimiter("\n");
+        List<Camping> campings= new ArrayList();;
         Camping camping = new Camping();
         List<Hoteles> hoteles = new ArrayList();
         List<Residencias> residencias = new ArrayList();
@@ -76,6 +76,7 @@ public class Ejercicio3ExtraHerenciaHoteles {
         Hotel5Estrellas cinco = new Hotel5Estrellas();
         ResidenciasService rs = new ResidenciasService();
         CampingService cs = new CampingService();
+        Residencias resi = new Residencias();
         String respuesta;
         int seleccion;
         Collections.sort(hoteles, new CompararPorPrecio());
@@ -83,18 +84,21 @@ public class Ejercicio3ExtraHerenciaHoteles {
 
         int opcion = 0;
         do {
-            System.out.println("********************************************************************************************");
-            System.out.println("*             Bienvenido al Sistema de Reservas Numero 1 en EGG                            *");
-            System.out.println("*         <-Seleccione del menu, las diferentes opciones de estadia --->                   *");
-            System.out.println("* 1) Viva unas miticas vacaciones                                   --->Hotel de Lujo***** *");
-            System.out.println("* 2) Viva un tour exquisito por nuestra Avenida mas tradicional     --->Hotel****          *");
-            System.out.println("* 3) ¿Desea alojarse en un lugar pensado para la familia?           --->Residencias        *");
-            System.out.println("* 4) ¿Queres estar en contacto con nuestra Naturaleza?              --->Campings           *");
-            System.out.println("* 5) ¿Queres consultar por descuentos?                              --->Descuentos         *");
-            System.out.println("* 6) Proveedores                                                                           *");
-            System.out.println("* 7) Indicar cual es la propuesta mas exclusiva                                            *");
-            System.out.println("* 8) Salir                                                                                 *");
-            System.out.println("********************************************************************************************");
+            System.out.println("*********************************************************************************************");
+            System.out.println("*             Bienvenido al Sistema de Reservas Numero 1 en EGG                             *");
+            System.out.println("*         <-Seleccione del menu, las diferentes opciones de estadia --->                    *");
+            System.out.println("*  1) Viva unas miticas vacaciones                                   --->Hotel de Lujo***** *");
+            System.out.println("*  2) Viva un tour exquisito por nuestra Avenida mas tradicional     --->Hotel****          *");
+            System.out.println("*  3) ¿Desea alojarse en un lugar pensado para la familia?           --->Residencias        *");
+            System.out.println("*  4) ¿Queres estar en contacto con nuestra Naturaleza?              --->Campings           *");
+            System.out.println("*  5) ¿Queres consultar por descuentos?                              --->Descuentos         *");
+            System.out.println("*  6) Proveedores                                                                           *");
+            System.out.println("*  7) Indicar cual es la propuesta mas exclusiva                                            *");
+            System.out.println("*  8) Mostrar todos los Hoteles                                                             *");
+            System.out.println("*  9) Mostrar todas los Residencias                                                         *");
+            System.out.println("* 10) Mostrar todos los Campings                                                            *");
+            System.out.println("* 11) Salir                                                                                 *");
+            System.out.println("*********************************************************************************************");
             opcion = input.nextInt();
 
             switch (opcion) {
@@ -104,6 +108,7 @@ public class Ejercicio3ExtraHerenciaHoteles {
                     hoteles.add(cinco); // Agregar el hotel a la lista
                     hotelMasCaro = Collections.max(hoteles, new CompararPorPrecio()); // Actualizar hotelMasCaro
                     System.out.println("volviendo al menu principal...");
+                    System.out.println(" ");
                     break;
                 case 2:
                     cuatro = h4.crearHotel4();
@@ -111,14 +116,17 @@ public class Ejercicio3ExtraHerenciaHoteles {
                     hoteles.add(cuatro); // Agregar el hotel a la lista
                     hotelMasCaro = Collections.max(hoteles, new CompararPorPrecio()); // Actualizar hotelMasCaro
                     System.out.println("volviendo al menu principal...");
+                    System.out.println(" ");
                     break;
                 case 3:
-                    rs.crearResidencia();
+                    resi = rs.crearResidencia();
+                    residencias.add(resi);
                     System.out.println("volviendo al menu principal...");
+                    System.out.println(" ");
                     break;
                 case 4:
-                    cs.crearCamping();
-                    campings = new ArrayList();
+                    camping = cs.crearCamping();
+                    campings.add(camping);
                     System.out.println("¿Desea saber que campings tienen restaurantes propios?");
                     System.out.println("Presione 1, de lo contrario presione 2");
                     seleccion = input.nextInt();
@@ -126,6 +134,7 @@ public class Ejercicio3ExtraHerenciaHoteles {
                         cs.tieneRestaurante();
                     }
                     System.out.println("volviendo al menu principal...");
+                    System.out.println(" ");
                     break;
                 case 5:
                     System.out.println("Desea conocer que Residencia tiene descuentos?");
@@ -134,10 +143,12 @@ public class Ejercicio3ExtraHerenciaHoteles {
                     if (respuesta.equalsIgnoreCase("s")) {
                         rs.tieneDescuento();
                         System.out.println("volviendo al menu principal...");
+                        System.out.println(" ");
                     } else {
                         System.out.println("Lamentamos que en este caso no haya sido de tu agrado... :(");
                         System.out.println("Seguimos trabajando para brindarte los mejores descuentos!");
                         System.out.println("volviendo al menu principal...");
+                        System.out.println(" ");
                     }
                     break;
                 case 6:
@@ -146,7 +157,7 @@ public class Ejercicio3ExtraHerenciaHoteles {
                     int eleccion = 0;
                     do {
                         System.out.println("----------------------------------------------------------");
-                        System.out.println("| 1) ¿Desea crear dinamicamente un  Hotel 5*?            |");
+                        System.out.println("| 1) ¿Desea crear dinamicamente un Hotel 5*?             |");
                         System.out.println("| 2) ¿Desea crear dinamicamenre un Hotel 4*?             |");
                         System.out.println("| 3) ¿Desea crear dinamicamente un Residencia?           |");
                         System.out.println("| 4) ¿Desea crear dinamicamentre un camping?             |");
@@ -155,25 +166,36 @@ public class Ejercicio3ExtraHerenciaHoteles {
                         eleccion = input.nextInt();
                         switch (eleccion) {
                             case 1:
-                                h5.crearHotel5Dinamico();
+                                cinco = h5.crearHotel5Dinamico();
                                 hoteles.add(cinco); // Agregar el hotel a la lista
                                 hotelMasCaro = Collections.max(hoteles, new CompararPorPrecio()); // Actualizar hotelMasCaro
                                 System.out.println("volviendo al menu principal...");
                                 break;
                             case 2:
-                                h4.crearHotel4Dinamico();
+                                cuatro = h4.crearHotel4Dinamico();
                                 hoteles.add(cuatro); // Agregar el hotel a la lista
                                 hotelMasCaro = Collections.max(hoteles, new CompararPorPrecio()); // Actualizar hotelMasCaro
-                                System.out.println("volviendo al menu principal...");
+                                System.out.println(" ");
+                                System.out.println("Volviendo al menu Anterior");
+                                System.out.println(" ");
                                 hotelMasCaro = hoteles.get(hoteles.size() - 1);
                                 break;
                             case 3:
-                                rs.crearResidenciaDinamica();
+                                resi =rs.crearResidenciaDinamica();
+                                residencias.add(resi);
                                 System.out.println("volviendo al menu principal...");
                                 break;
                             case 4:
-                                cs.crearCampingDinamico();
-                                System.out.println("volviendo al menu principal...");
+                                camping =  cs.crearCampingDinamico();
+                                campings.add(camping);
+                                System.out.println(" ");
+                                System.out.println("Volviendo al menu Anterior");
+                                System.out.println(" ");
+                                break;
+                            case 5: 
+                                System.out.println(" ");
+                                System.out.println("Volviendo al menu Anterior");
+                                System.out.println(" ");
                                 break;
                             default:
                                 System.out.println("Opcion incorrecta");
@@ -194,6 +216,41 @@ public class Ejercicio3ExtraHerenciaHoteles {
                     System.out.println("volviendo al menu principal...");
                     break;
                 case 8:
+                    if (hoteles.isEmpty()) {
+                        System.out.println("En este momento el sistema no puede mostrar los Hoteles disponibles.");
+                    } else { 
+                        System.out.println("Eston son nuestros Hoteles:" + "\n");
+                    for (Hoteles arg : hoteles) {
+                        System.out.println( arg);
+                    }}
+                   
+                    System.out.println(" ");
+                    System.out.println("volviendo al menu principal...");
+                    System.out.println(" ");
+                    break;
+                case 9:
+                    if (residencias.isEmpty()) {
+                        System.out.println("En este momento el sistema no puede mostrar las Residencias disponibles.");
+                    }
+                    for (Residencias arg : residencias) {
+                        System.out.println(arg);
+                    }
+                    System.out.println(" ");
+                    System.out.println("volviendo al menu principal...");
+                    System.out.println(" ");
+                    break;
+                case 10:
+                    if (campings.isEmpty()) {
+                        System.out.println("En este momento el sistema no puede mostrar los Campings disponibles.");
+                    }
+                    for (Camping arg : campings) {
+                        System.out.println(arg);
+                    }
+                    System.out.println(" ");
+                    System.out.println("volviendo al menu principal...");
+                    System.out.println(" ");
+                    break;
+                case 11:
                     System.out.println("Te esperamos nuevamente!");
                     System.out.println("Saliendo...");
                     break;
@@ -202,7 +259,7 @@ public class Ejercicio3ExtraHerenciaHoteles {
                     break;
 
             }
-        } while (opcion != 8);
+        } while (opcion != 11);
 
     }
 

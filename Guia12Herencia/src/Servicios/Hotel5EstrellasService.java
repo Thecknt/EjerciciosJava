@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Hotel5EstrellasService extends CompararPorPrecio{
-Scanner input = new Scanner(System.in);
+Scanner input = new Scanner(System.in).useDelimiter("\n");
 List<Hoteles> hoteles= new ArrayList();
         
     Hotel5Estrellas cinco;
@@ -27,6 +27,7 @@ List<Hoteles> hoteles= new ArrayList();
         String localidad = "Ciudad Autonoma de Buenos Aires";
         cinco.setLocalidad(localidad);
         String gerente = "Fernando Alonso";
+        cinco.setGerente(gerente);
         int cantidadhabitaciones = 250;
         cinco.setCantHabitaciones(cantidadhabitaciones);
         int cantidadCamas = 480;
@@ -50,7 +51,7 @@ List<Hoteles> hoteles= new ArrayList();
         int cantidadSalonesConferencia = 10;
         cinco.setCantidadSalonesConferencia(cantidadSalonesConferencia);
 
-        cinco = new Hotel5Estrellas(cantidadSalonesConferencia, cantidadSuites, cantidadLimosinas, gimnasio, nombreRestaurant, capacidadRestaurant, cantidadhabitaciones, cantidadCamas, cantidadPisos, precioHabitacion, nombreHotel, direccionHotel, localidad, gerente);
+        //cinco = new Hotel5Estrellas(cantidadSalonesConferencia, cantidadSuites, cantidadLimosinas, gimnasio, nombreRestaurant, capacidadRestaurant, cantidadhabitaciones, cantidadCamas, cantidadPisos, precioHabitacion, nombreHotel, direccionHotel, localidad, gerente);
         hoteles.add(cinco);
         System.out.println(cinco);
         return cinco;
@@ -76,18 +77,19 @@ List<Hoteles> hoteles= new ArrayList();
     }
 
      public Hotel5Estrellas crearHotel5Dinamico(){
-        
-        System.out.println("Ingrese el nombre del Hotel****");
-        String nombreHotel = input.nextLine();
+        cinco1 = new Hotel5Estrellas();
+        System.out.println("Ingrese el nombre del Hotel*****");
+        String nombreHotel = input.next();
         cinco1.setNombre(nombreHotel);
         System.out.println("Ingrese la direccion del Hotel");
-        String direccionHotel = input.nextLine();
+        String direccionHotel = input.next();
         cinco1.setDireccion(direccionHotel);
         System.out.println("Ingrese la localidad");
-        String localidad = input.nextLine();
+        String localidad = input.next();
         cinco1.setLocalidad(localidad);
         System.out.println("Ingrese el nombre del/la Gerente responsable");
-        String gerente = input.nextLine();
+        String gerente = input.next();
+        cinco1.setGerente(gerente);
         System.out.println("Ingrese la cantidad de habitaciones");
         int cantidadhabitaciones = input.nextInt();
         cinco1.setCantHabitaciones(cantidadhabitaciones);
@@ -102,7 +104,7 @@ List<Hoteles> hoteles= new ArrayList();
         Double precioHabitacion = input.nextDouble();
         cinco1.setPrecioHabitacion(precioHabitacion);
         System.out.println("Ingrese el nombre del Restaurant");
-        String nombreRestaurant = input.nextLine();
+        String nombreRestaurant = input.next();
         cinco1.setNombreRestaurant(nombreRestaurant);
         char gimnasio = 'A';
         cinco1.setGimnasio(gimnasio);
@@ -118,7 +120,7 @@ List<Hoteles> hoteles= new ArrayList();
          System.out.println("Cuantos salones para conferencia se haran?");
          int cantidadSalonesConferencia = input.nextInt();
         cinco1.setCantidadSalonesConferencia(cantidadSalonesConferencia);
-        cinco1 = new Hotel5Estrellas(cantidadSalonesConferencia, cantidadSuites, cantidadLimosinas, gimnasio, nombreRestaurant, capacidadRestaurant, cantidadhabitaciones, cantidadCamas, cantidadPisos, precioHabitacion, nombreHotel, direccionHotel, localidad, gerente);
+        //cinco1 = new Hotel5Estrellas(cantidadSalonesConferencia, cantidadSuites, cantidadLimosinas, gimnasio, nombreRestaurant, capacidadRestaurant, cantidadhabitaciones, cantidadCamas, cantidadPisos, precioHabitacion, nombreHotel, direccionHotel, localidad, gerente);
         hoteles.add(cinco1);
         System.out.println("Nuestros Hoteles cuentan con las mejores Opciones de disponibilidad y servicio.");
         System.out.println("Les comentamos nuestras instalaciones y precios");
