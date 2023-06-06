@@ -27,19 +27,19 @@ package Principal;
 import Entidades.Edificio;
 import Entidades.EdificioDeOficinas;
 import Entidades.Polideportivo;
-import Servicios.EdificioDeOficionasService;
+import Servicios.EdificioDeOficinasService;
+
 import Servicios.PolideportivoService;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Ejercicio2ExtraHerencia {
 
     public static void main(String[] args) {
-        //Scanner input = new Scanner(System.in);
+       
         List<Edificio> edificios = new ArrayList();
         PolideportivoService ps = new PolideportivoService();
-        EdificioDeOficionasService edi = new EdificioDeOficionasService();
+        EdificioDeOficinasService edi = new EdificioDeOficinasService();
         Polideportivo poli;
         EdificioDeOficinas ediOffice;
         System.out.println("***********************************************************************");
