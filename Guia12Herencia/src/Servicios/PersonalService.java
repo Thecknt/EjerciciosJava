@@ -22,7 +22,7 @@ public class PersonalService {
             usuario = input.next();
             System.out.println("Ingrese la contraseña");
             password = input.next();
-        } while (!usuario.equals("admin") || !password.equals("12345admin"));
+        } while (!usuario.equals("admin") || !password.equals("*****"));
         System.out.println("Bienvenido/a");
 
         personal = new PersonalDeServicio();
@@ -51,7 +51,7 @@ public class PersonalService {
             usuario = input.next();
             System.out.println("Ingrese la contraseña");
             password = input.next();
-        } while (!usuario.equals("admin") || !password.equals("12345admin"));
+        } while (!usuario.equals("admin") || !password.equals("*****"));
         System.out.println("Bienvenido/a");
 
         System.out.println("Ingrese a que seccion desea cambiar al empleado");
@@ -68,7 +68,7 @@ public class PersonalService {
             usuario = input.next();
             System.out.println("Ingrese la contraseña");
             password = input.next();
-        } while (!usuario.equals("admin") || !password.equals("12345admin"));
+        } while (!usuario.equals("admin") || !password.equals("*****"));
         System.out.println("Bienvenido/a");
         System.out.println("A que estado civil desea cambiar al alumno " + personal.getNombre());
         personal.setEstadoCivil(input.next());
@@ -84,7 +84,7 @@ public class PersonalService {
             usuario = input.next();
             System.out.println("Ingrese la contraseña");
             password = input.next();
-        } while (!usuario.equals("admin") || !password.equals("12345admin"));
+        } while (!usuario.equals("admin") || !password.equals("*****"));
         System.out.println("Bienvenido/a");
         System.out.println("ingrese el nuevo despacho del personal");
         personal.setNumeroDespacho(input.nextInt());
