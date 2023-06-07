@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="PersonalDeServicio" package="Entidades" visibility="public" xPosition="475.0" yPosition="486.0">
+      <Fields>
+        <Field name="seccion" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="seccion"/>
+          <Argument type="int" name="anioIncorporacion"/>
+          <Argument type="int" name="numeroDespacho"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getSeccion" returnType="String" visibility="public"/>
+        <Method name="setSeccion" returnType="String" visibility="public">
+          <Argument type="String" name="seccion"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="String" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="String" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="int" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getEstadoCivil" returnType="String" visibility="public"/>
+        <Method name="setEstadoCivil" returnType="String" visibility="public">
+          <Argument type="String" name="estadoCivil"/>
+        </Method>
+        <Method name="getAnioIncorporacion" returnType="int" visibility="public"/>
+        <Method name="setAnioIncorporacion" returnType="int" visibility="public">
+          <Argument type="int" name="anioIncorporacion"/>
+        </Method>
+        <Method name="getNumeroDespacho" returnType="int" visibility="public"/>
+        <Method name="setNumeroDespacho" returnType="int" visibility="public">
+          <Argument type="int" name="numeroDespacho"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Profesores" package="Entidades" visibility="public" xPosition="600.0" yPosition="473.0">
+      <Fields>
+        <Field name="departamento" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="departamento"/>
+          <Argument type="int" name="anioIncorporacion"/>
+          <Argument type="int" name="numeroDespacho"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDepartamento" returnType="String" visibility="public"/>
+        <Method name="setDepartamento" returnType="String" visibility="public">
+          <Argument type="String" name="departamento"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="String" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="String" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="int" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getEstadoCivil" returnType="String" visibility="public"/>
+        <Method name="setEstadoCivil" returnType="String" visibility="public">
+          <Argument type="String" name="estadoCivil"/>
+        </Method>
+        <Method name="getAnioIncorporacion" returnType="int" visibility="public"/>
+        <Method name="setAnioIncorporacion" returnType="int" visibility="public">
+          <Argument type="int" name="anioIncorporacion"/>
+        </Method>
+        <Method name="getNumeroDespacho" returnType="int" visibility="public"/>
+        <Method name="setNumeroDespacho" returnType="int" visibility="public">
+          <Argument type="int" name="numeroDespacho"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Estudiantes" package="Entidades" visibility="public" xPosition="67.0" yPosition="296.0">
+      <Fields>
+        <Field name="curso" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="curso"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCurso" returnType="String" visibility="public"/>
+        <Method name="setCurso" returnType="String" visibility="public">
+          <Argument type="String" name="curso"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="String" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="String" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="int" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getEstadoCivil" returnType="String" visibility="public"/>
+        <Method name="setEstadoCivil" returnType="String" visibility="public">
+          <Argument type="String" name="estadoCivil"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Empleados" package="Entidades" visibility="public" xPosition="644.0" yPosition="21.0">
+      <Fields>
+        <Field name="anioIncorporacion" type="int" visibility="protected"/>
+        <Field name="numeroDespacho" type="int" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="int" name="anioIncorporacion"/>
+          <Argument type="int" name="numeroDespacho"/>
+          <Argument type="String" name="nombre"/>
+          <Argument type="String" name="apellido"/>
+          <Argument type="int" name="id"/>
+          <Argument type="String" name="estadoCivil"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getAnioIncorporacion" returnType="int" visibility="public"/>
+        <Method name="setAnioIncorporacion" returnType="int" visibility="public">
+          <Argument type="int" name="anioIncorporacion"/>
+        </Method>
+        <Method name="getNumeroDespacho" returnType="int" visibility="public"/>
+        <Method name="setNumeroDespacho" returnType="int" visibility="public">
+          <Argument type="int" name="numeroDespacho"/>
+        </Method>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+        <Method name="setNombre" returnType="String" visibility="public">
+          <Argument type="String" name="nombre"/>
+        </Method>
+        <Method name="getApellido" returnType="String" visibility="public"/>
+        <Method name="setApellido" returnType="String" visibility="public">
+          <Argument type="String" name="apellido"/>
+        </Method>
+        <Method name="getId" returnType="int" visibility="public"/>
+        <Method name="setId" returnType="int" visibility="public">
+          <Argument type="int" name="id"/>
+        </Method>
+        <Method name="getEstadoCivil" returnType="String" visibility="public"/>
+        <Method name="setEstadoCivil" returnType="String" visibility="public">
+          <Argument type="String" name="estadoCivil"/>
+        </Method>
+        <Method name="cambiarDesoacho" returnType="int" visibility="public">
+          <Argument type="int" name="numeroDespacho"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Facultad" package="" visibility="public" xPosition="33.0" yPosition="31.0">
+      <Fields>
+        <Field name="estudiante" type="Estudiantes" visibility="private"/>
+        <Field name="empleado" type="Empleados" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Entidades.PersonalDeServicio" target="Entidades.Empleados"/>
+    <IsRelation name="is" source="Entidades.Profesores" target="Entidades.Empleados"/>
+    <HasRelation name="tiene" source="Facultad" target="Entidades.Estudiantes" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="tiene" source="Facultad" target="Entidades.Empleados" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

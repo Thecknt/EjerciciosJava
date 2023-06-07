@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ejercicio1Extra">
+  <ClassDiagramComponents>
+    <Class name="Cliente" package="" visibility="public" xPosition="16.0" yPosition="78.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="DNI" type="Integer" visibility="private"/>
+        <Field name="fechaAlquiler" type="Date" visibility="private"/>
+        <Field name="fechaDevolucion" type="Date" visibility="private"/>
+        <Field name="posicionAmarre" type="Integer" visibility="private"/>
+        <Field name="barco" type="Barco" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Barco" package="" visibility="public" xPosition="376.0" yPosition="85.0">
+      <Fields>
+        <Field name="matricula" type="Integer" visibility="private"/>
+        <Field name="eslora" type="Integer" visibility="private"/>
+        <Field name="fechaFabricacion" type="Date" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Velero extends Barco" package="" visibility="public" xPosition="786.0" yPosition="18.0">
+      <Fields>
+        <Field name="numeroMastiles" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="BarcoMotor extends Barco" package="" visibility="public" xPosition="786.0" yPosition="199.0">
+      <Fields>
+        <Field name="potenciaMotor" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="YateDeLujo extends Barco" package="" visibility="public" xPosition="812.0" yPosition="328.0">
+      <Fields>
+        <Field name="potenciaMotor" type="Integer" visibility="private"/>
+        <Field name="numeroCamarotes" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="Tiene" source="Cliente" target="Barco" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Tiene" source="Barco" target="YateDeLujo extends Barco" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Tiene" source="Barco" target="BarcoMotor extends Barco" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="Tiene" source="Barco" target="Velero extends Barco" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
