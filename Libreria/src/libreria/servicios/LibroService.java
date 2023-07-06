@@ -11,13 +11,13 @@ import libreria.entidades.Editorial;
 import libreria.entidades.Libro;
 
 public class LibroService {
-    
+
     EntityManagerFactory emf = Persistence.createEntityManagerFactory("LibreriaPU");
     EntityManager em = emf.createEntityManager();
     Scanner input = new Scanner(System.in).useDelimiter("\n");
     AutorService as = new AutorService();
     EditorialService es = new EditorialService();
-    
+
     public Libro crearLibro() {
         String nombre;
         Long isbn;
@@ -94,10 +94,11 @@ public class LibroService {
         em.close();
         return libro;
     }
-    
+
     public void buscarLibro() {
         int opciones;
         String nombre;
+        boolean noEncontrado = true;
         do {
             System.out.println("");
             System.out.println("*****************************************************");
@@ -113,11 +114,10 @@ public class LibroService {
             switch (opciones) {
                 case 1:
                     try {
-                    boolean noEncontrado = true;
                     do {
                         System.out.println("Ingrese el nombre del Libro");
                         nombre = input.next();
-                        
+
                         List<Libro> libros = em.createQuery("SELECT a FROM Libro a").getResultList();
                         for (Libro aux : libros) {
                             if (aux.getTitulo().equalsIgnoreCase(nombre)) {
@@ -135,11 +135,11 @@ public class LibroService {
                 break;
                 case 2:
                     try {
-                    boolean noEncontrado = true;
+
                     do {
                         System.out.println("Ingrese el ISBN del Libro");
                         int nombreISBN = input.nextInt();
-                        
+
                         List<Libro> libros = em.createQuery("SELECT a FROM Libro a").getResultList();
                         for (Libro aux : libros) {
                             if (aux.getIsbn() == nombreISBN) {
@@ -156,29 +156,8 @@ public class LibroService {
                 }
                 break;
                 case 3:
-                     try {
-                    boolean noEncontrado = true;
-                    do {
-                        System.out.println("Ingrese el nombre de la Editorial");
-                        String nombreEditorial = input.next();
-                        List<Libro> libros = em.createQuery("SELECT l FROM Libro l JOIN l.editorial a WHERE a.nombre LIKE CONCAT(:nombreEditorial, '%')")
-                                .setParameter("nombreEditorial", nombreEditorial)
-                                .getResultList();
-                        for (Libro aux : libros) {
-                            {
-                                System.out.println(aux);
-                                noEncontrado = false;
-                            }
-                        }
-                        if (noEncontrado) {
-                            System.out.println("No se encuentra la editorial registrada");
-                        }
-                    } while (noEncontrado);
-                    
-                } catch (Exception e) {
-                    System.out.println("Error: " + e.getMessage());
-                }
-                break;
+                    buscarLibroPorEditorial();
+                    break;
                 case 4:
                     buscarLibroPorAutor();
                     break;
@@ -189,14 +168,14 @@ public class LibroService {
                     System.out.println("opcion invalida");
                     break;
             }
-            
-        } while (opciones != 6);  
+
+        } while (opciones != 5);
     }
-    
+
     public void buscarLibroPorAutor() {
         try {
             boolean noEncontrado = true;
-            
+
             System.out.println("Ingrese el nombre del Autor");
             String nombreAutor = input.next();
             List<Libro> libros = em.createQuery("SELECT l FROM Libro l JOIN l.autor a WHERE a.nombre LIKE CONCAT(:nombreAutor, '%')")
@@ -215,7 +194,25 @@ public class LibroService {
             System.out.println("Error: " + e.getMessage());
         }
     }
-    
+
+    public void buscarLibroPorEditorial() {
+        try {
+            System.out.println("Ingrese el nombre de la Editorial");
+        String nombreEditorial = input.next();
+            em.getTransaction().begin();
+            String query = "SELECT a FROM a WHERE a.Editorial";
+            List<Editorial> editoriales = em.createQuery(query).getResultList();
+            for (Editorial aux : editoriales) {
+                System.out.println(aux);
+            }
+            em.getTransaction().commit();
+        } catch (Exception e) {
+            em.getTransaction().rollback();
+            System.out.println("Error: " + e.getMessage());
+        } 
+        System.out.println("Gracias");
+    }
+
     public Libro modificarLibro() {
         String nombre;
         Libro libro = new Libro();
@@ -332,7 +329,7 @@ public class LibroService {
                     break;
                 case 4:
                     Editorial editorial = new Editorial();
-                    
+
                     String nuevaEditorial;
                     try {
                         boolean noEncontrado = true;
@@ -379,10 +376,10 @@ public class LibroService {
                     break;
             }
         } while (opcion != 5);
-        
+
         return libro;
     }
-    
+
     public void eliminarLibro() {
         String nombre;
         try {
@@ -390,7 +387,7 @@ public class LibroService {
             do {
                 System.out.println("Ingrese el nombre del Libro a Eliminar");
                 nombre = input.next();
-                
+
                 List<Libro> libros = em.createQuery("SELECT a FROM Libro a").getResultList();
                 for (Libro aux : libros) {
                     if (aux.getTitulo().equalsIgnoreCase(nombre)) {

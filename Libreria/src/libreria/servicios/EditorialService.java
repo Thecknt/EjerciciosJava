@@ -36,27 +36,27 @@ public class EditorialService {
     }
 
     public void buscarEditorial() {
-
         String nombreEditorial;
         try {
             boolean noEncontrado = true;
             do {
                 System.out.println("Ingrese el nombre de la Editorial");
                 nombreEditorial = input.next();
-
                 List<Editorial> editoriales = em.createQuery("SELECT a FROM Editorial a").getResultList();
                 for (Editorial aux : editoriales) {
-                    if (aux.getNombre().equalsIgnoreCase(nombreEditorial)) {
+                   if (aux.getNombre().equalsIgnoreCase(nombreEditorial)) {
                         System.out.println(aux);
-                        noEncontrado = false;
-                    }
-                }
-                if (noEncontrado) {
-                    System.out.println("La Editorial no se encuentra aun registrada");
-                }
+                       noEncontrado = false;
+                        break;     
+                  }
+                } 
+               if (noEncontrado) {
+                  System.out.println("La Editorial no se encuentra aun registrada");
+               }
             } while (noEncontrado);
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
+            
         }
     }
 

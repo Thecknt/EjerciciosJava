@@ -28,6 +28,8 @@ public class Libreria {
             opcion = input.nextInt();
             switch (opcion) {
                 case 1:
+                    int opc2;
+                    do{
                     System.out.println("");
                     System.out.println("********************************");
                     System.out.println("*  Ingrese la opcion deseada   *");
@@ -37,7 +39,7 @@ public class Libreria {
                     System.out.println("* 4) Regresar al menu anterior *");
                     System.out.println("********************************");
                     System.out.println("");
-                    int opc2 = input.nextInt();
+                    opc2 = input.nextInt();
                     switch (opc2) {
                         case 1:
                             ls.crearLibro();
@@ -55,10 +57,12 @@ public class Libreria {
                             System.out.println("Ingrese una opcion valida");
                             break;
                     }
-                    while (opc2 != 4) {
                     }
+                    while (opc2 != 4);
                     break;
                 case 2:
+                    int opc3;
+                    do{
                     System.out.println("");
                     System.out.println("********************************");
                     System.out.println("*  Ingrese la opcion deseada   *");
@@ -68,7 +72,7 @@ public class Libreria {
                     System.out.println("* 4) Salir                     *");
                     System.out.println("********************************");
                     System.out.println("");
-                    int opc3 = input.nextInt();
+                    opc3 = input.nextInt();
                     switch (opc3) {
                         case 1:
                             ls.buscarLibroPorAutor();
@@ -86,10 +90,13 @@ public class Libreria {
                             System.out.println("Ingrese una opcion valida");
                             break;
                     }
-                    while (opc3 != 4) {
                     }
+                    while (opc3 != 4);
+                    
                     break;
                 case 3:
+                    int opc4;
+                    do{
                     System.out.println("");
                     System.out.println("********************************");
                     System.out.println("*  Ingrese la opcion deseada   *");
@@ -99,7 +106,7 @@ public class Libreria {
                     System.out.println("* 4) Regresar al menu anterior *");
                     System.out.println("********************************");
                     System.out.println("");
-                    int opc4 = input.nextInt();
+                    opc4 = input.nextInt();
                     switch (opc4) {
                         case 1:
                             ls.eliminarLibro();
@@ -116,20 +123,23 @@ public class Libreria {
                         default:
                             System.out.println("Ingrese una opcion valida");
                     }
-                    while (opc4 != 4) {
                     }
-                    break;
-                case 4:
+                    while (opc4 != 4);
+                    break; 
+                    
+                case 4: 
+                    int opc5;
+                    do{
                     System.out.println("");
                     System.out.println("*********************************");
                     System.out.println("*  Ingrese la opcion deseada    *");
-                    System.out.println("* 1) Desa buscar un Libro       *");
-                    System.out.println("* 2) Desa buscar un Autor       *");
-                    System.out.println("* 3) Desa buscar una Editorial  *");
+                    System.out.println("* 1) Desea buscar un Libro      *");
+                    System.out.println("* 2) Desea buscar un Autor      *");
+                    System.out.println("* 3) Desea buscar una Editorial *");
                     System.out.println("* 4) Regresar al menu anterior  *");
                     System.out.println("*********************************");
                     System.out.println("");
-                    int opc5 = input.nextInt();
+                   opc5 = input.nextInt();
                     switch (opc5) {
                         case 1:
                             ls.buscarLibro();
@@ -146,9 +156,8 @@ public class Libreria {
                         default:
                             System.out.println("Ingrese una opcion valida");
                     }
-                    while (opc5 != 4) {
-                    }
-                    break;
+                    }while(opc5 !=4);
+                     break;
                 case 5:
                     System.out.println("Gracias por utilizar nuestros servicios.");
                     break;
@@ -156,7 +165,7 @@ public class Libreria {
                     System.out.println("Ingrese una opcion valida");
                     break;
             }
-        } while (opcion != 5);
+        } while (opcion != 6);
     }
 
 }
